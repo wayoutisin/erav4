@@ -2,6 +2,30 @@ document.addEventListener('DOMContentLoaded', () => {
   const organizeTabsButton = document.getElementById('organizeTabs');
   const jumbleTabsButton = document.getElementById('jumbleTabs');
 
+  // Helper to generate n-grams from a string
+  const getNgrams = (text, n = 3) => {
+    if (!text) return new Set();
+    const normalizedText = text.toLowerCase().replace(/[^a-z0-9]/g, '');
+    const ngrams = new Set();
+    for (let i = 0; i <= normalizedText.length - n; i++) {
+      ngrams.add(normalizedText.substring(i, i + n));
+    }
+    return ngrams;
+  };
+
+  // Jaccard Similarity based on n-grams
+  const jaccardSimilarity = (text1, text2) => {
+    const ngrams1 = getNgrams(text1);
+    const ngrams2 = getNgrams(text2);
+
+    if (ngrams1.size === 0 || ngrams2.size === 0) return 0;
+
+    const intersection = new Set([...ngrams1].filter(x => ngrams2.has(x)));
+    const union = new Set([...ngrams1, ...ngrams2]);
+
+    return intersection.size / union.size;
+  };
+
   // Simple PRNG for deterministic shuffling
   function mulberry32(a) {
     return function() {
@@ -25,20 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   organizeTabsButton.addEventListener('click', () => {
     chrome.tabs.query({}, (tabs) => {
-      const getNormalizedTitle = (title) => {
-        return title ? title.toLowerCase().replace(/[^a-z0-9 ]/g, '').split(' ').filter(word => word.length > 2) : [];
-      };
-
-      const getSimilarity = (title1, title2) => {
-        const words1 = getNormalizedTitle(title1);
-        const words2 = getNormalizedTitle(title2);
-        if (words1.length === 0 || words2.length === 0) return 0;
-
-        const intersection = words1.filter(word => words2.includes(word)).length;
-        const union = new Set([...words1, ...words2]).size;
-        return intersection / union;
-      };
-
       const groupedTabs = [];
       const processedTabIds = new Set();
 
@@ -49,7 +59,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
           tabs.forEach(tab2 => {
             if (!processedTabIds.has(tab2.id) && tab1.id !== tab2.id) {
-              if (getSimilarity(tab1.title, tab2.title) > 0.3) { // Threshold for similarity
+              // Use Jaccard similarity for comparison
+              if (jaccardSimilarity(tab1.title, tab2.title) > 0.2) { // Adjusted threshold for Jaccard
                 similarTabs.push(tab2);
                 processedTabIds.add(tab2.id);
               }

@@ -29,3 +29,11 @@ This feature randomly shuffles all unpinned tabs in the current browser window. 
 ## Styling
 
 The popup interface dynamically adjusts its background and text colors based on your browser's dark or light mode settings, providing an aesthetically pleasing experience.
+
+## Key Functions Overview
+
+*   `organizeTabsButton.addEventListener`: Handles the logic for grouping similar tabs based on page title similarity using Jaccard Similarity with N-grams.
+*   `jumbleTabsButton.addEventListener`: Handles the logic for randomly shuffling all unpinned tabs in the current window.
+*   `jaccardSimilarity(text1, text2)`: Computes the similarity between two tab titles based on their character n-grams.
+*   `getNgrams(text, n)`: Helper function to generate character n-grams from a given text.
+*   `shuffleArray(array)`: Randomly shuffles the elements of an array using a seeded pseudo-random number generator.
