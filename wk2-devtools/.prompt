@@ -1,0 +1,37 @@
+Prompt:
+
+Build a Flask web application for managing daily appointments at a clinic, supporting peer-to-peer appointment management and reducing wait times collaboratively.
+
+Requirements:
+
+The app should maintain a register of today’s patient appointments (hardcode a sample list for demonstration).
+
+For each patient, display:
+
+Patient name
+
+Scheduled appointment time
+
+Current wait time (in minutes)
+
+Status (waiting/completed)
+
+Location (hardcode a few realistic locations and distances from the clinic)
+
+Start time from home: Calculate and show the time when the patient should leave home, based on appointment time and distance. For this prototype, hardcode distances and suggested start times for sample patients.
+
+Each patient entry should have a button to mark their appointment as completed.
+
+When marked completed, all remaining patients' wait times decrease by 5 minutes.
+
+The patient’s status updates to completed.
+
+There must be a form to add a new patient for today, including name, scheduled time, location (predefined options or text box), and calculated/provided distance and start time.
+
+The app should update the UI dynamically to show all changes in real time (use Flask routes/AJAX as needed).
+
+Store all registers in server memory for the demo (no database).
+
+Provide clear, brief instructions on the main page explaining the peer-to-peer system and patient actions.
+
+For all patients, location, distance from clinic, and “leave home by”/start time should be visible, using hardcoded sample data.
