@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Success</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Kha Loon?</h1>
+    </header>
+    <div class="container">
+        <div class="upload-header">
+            <h1>File Uploaded Successfully!</h1>
+            <a href="/" class="button">Upload another image</a>
+        </div>
+        <p>Filename: {{ filename }}</p>
+        <div class="thumbnail-container">
+            <img src="{{ url_for('uploaded_file_serve', filename=filename) }}" alt="Uploaded Image Thumbnail" class="thumbnail">
+        </div>
+        <div class="content-summary-container">
+            <div class="extracted-content">
+                <h2>Extracted Information:</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for line in extracted_text.split('\n') %}
+                        <tr>
+                            <td>{{ line }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="gemini-summary">
+                <h2>Health Summary:</h2>
+                <div class="indicator-wrapper">
+                    <p>Harmfulness Indicator:</p>
+                    <div class="indicator {{ health_summary.indicator }}"></div>
+                </div>
+                <h3>Positives:</h3>
+                <ul>
+                    {% for positive in health_summary.positives %}
+                    <li>{{ positive }}</li>
+                    {% endfor %}
+                </ul>
+                <h3>Negatives:</h3>
+                <ul>
+                    {% for negative in health_summary.negatives %}
+                    <li>{{ negative }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
