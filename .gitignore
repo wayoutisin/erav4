@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Node.js
+node_modules/
+
+# macOS
+.DS_Store
+
+# Editor/IDE
+.vscode/
+.idea/
+
+# wk3-gemini specific files
+wk3-gemini/uploads/
+
+# wk2-devtools specific files
+wk2-devtools/uv.lock
+
+# word2vec specific files
+papers/word2vec/img.png
+papers/word2vec/1301.3781v3.pdf
+papers/word2vec/Instructions.md
+papers/word2vec/README.md
