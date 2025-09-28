@@ -327,7 +327,7 @@ if __name__ == "__main__":
     logging.getLogger().handlers.clear()
 
     # Configure logging
-    log_filename = f"{args.model}.log"
+    log_filename = os.path.join("logs", f"{args.model}.log")
     logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s',
                         handlers=[
                             logging.FileHandler(log_filename),
