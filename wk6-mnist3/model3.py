@@ -13,34 +13,41 @@ class MNISTModelFinal(nn.Module):
         # nn.Sequential is a container that holds a sequence of modules.
         # The input will be passed through all modules in the same order as they are added.
         self.conv1 = nn.Sequential(
-            # First Convolutional Block
-            nn.Conv2d(1, 12, kernel_size=3, bias=False),  # 2D Convolution: 1 input channel (grayscale), 12 output channels, 3x3 kernel
+            # First Convolutional Block 
+            nn.Conv2d(1, 12, kernel_size=3, padding='same', bias=False),  # 2D Convolution: 1 input channel (grayscale), 12 output channels, 3x3 kernel
             nn.BatchNorm2d(12),  # Batch Normalization: normalizes outputs for stable training
             nn.ReLU(inplace=True),  # ReLU activation: introduces non-linearity
+            # Receptive Field 3
 
             # Second Convolutional Block
-            nn.Conv2d(12, 12, kernel_size=3, bias=False), # 2D Convolution: 12 input channels, 12 output channels, 3x3 kernel
+            nn.Conv2d(12, 12, kernel_size=3, padding='same', groups=1, bias=False), # 2D Convolution: 12 input channels, 12 output channels, 3x3 kernel
             nn.BatchNorm2d(12),  # Batch Normalization
             nn.ReLU(inplace=True),  # ReLU activation
+            # Receptive Field 5
 
             nn.MaxPool2d(kernel_size=2),  # Max Pooling: reduces spatial dimensions (e.g., 28x28 -> 14x14)
+            # Receptive Field 6
 
             # Third Convolutional Block
-            nn.Conv2d(12, 12, kernel_size=3, bias=False), # 2D Convolution: 12 input channels, 12 output channels, 3x3 kernel
+            nn.Conv2d(12, 12, kernel_size=3, padding='same', bias=False), # 2D Convolution: 12 input channels, 12 output channels, 3x3 kernel
             nn.BatchNorm2d(12),  # Batch Normalization
             nn.ReLU(inplace=True),  # ReLU activation
+            # Receptive Field 10
 
             # Fourth Convolutional Block
-            nn.Conv2d(12, 12, kernel_size=3, bias=False), # 2D Convolution: 12 input channels, 12 output channels, 3x3 kernel
+            nn.Conv2d(12, 12, kernel_size=3, padding='same', bias=False), # 2D Convolution: 12 input channels, 12 output channels, 3x3 kernel
             nn.BatchNorm2d(12),  # Batch Normalization
             nn.ReLU(inplace=True),  # ReLU activation
+            # Receptive Field 14
 
             nn.MaxPool2d(kernel_size=2),  # Max Pooling: reduces spatial dimensions again (e.g., 14x14 -> 7x7)
+            # Receptive Field 16
 
             # Fifth Convolutional Block
-            nn.Conv2d(12, 24, kernel_size=3, bias=False), # 2D Convolution: 12 input channels, 24 output channels, 3x3 kernel
+            nn.Conv2d(12, 24, kernel_size=3, groups=1, bias=False), # 2D Convolution: 12 input channels, 24 output channels, 3x3 kernel
             nn.BatchNorm2d(24),  # Batch Normalization
             nn.ReLU(inplace=True),  # ReLU activation
+            # Receptive Field 24
 
             nn.AdaptiveAvgPool2d(1),  # Global Average Pooling: reduces each feature map to a single value (1x1)
 
