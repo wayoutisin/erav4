@@ -31,3 +31,17 @@ papers/word2vec/img.png
 papers/word2vec/1301.3781v3.pdf
 papers/word2vec/Instructions.md
 papers/word2vec/README.md
+
+# wk6-mnist3 specific files
+wk6-mnist3/data/
+wk6-mnist3/*/__pycache__/
+wk6-mnist3/*.log
+wk6-mnist3/*/mnist_model_checkpoint.pth
+wk6-mnist3/uv.lock
+!wk6-mnist3/MNIST.ipynb
+!wk6-mnist3/model1.log
+!wk6-mnist3/model2.log
+!wk6-mnist3/model3.log
+
+data/
+tdata/
