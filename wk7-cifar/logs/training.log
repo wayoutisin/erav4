@@ -1,0 +1,180 @@
+2025-10-08 07:33:32,337 - INFO - Using device: cpu
+2025-10-08 07:33:32,338 - INFO - 
+Initializing Final CNN Model...
+2025-10-08 07:33:32,340 - INFO - ============================================================
+2025-10-08 07:33:32,340 - INFO - BASELINE CNN FOR CIFAR-10
+2025-10-08 07:33:32,340 - INFO - ============================================================
+2025-10-08 07:33:32,340 - INFO - Loading CIFAR-10 dataset...
+2025-10-08 07:33:32,340 - INFO - Using albumentations for augmentation
+2025-10-08 07:33:33,415 - INFO - Training samples: 50000
+2025-10-08 07:33:33,415 - INFO - Test samples: 10000
+2025-10-08 07:33:33,415 - INFO - Total parameters: 144,166
+2025-10-08 07:33:33,416 - INFO - Trainable parameters: 144,166
+2025-10-08 07:33:33,416 - INFO - 
+Model Architecture:
+2025-10-08 07:33:33,416 - INFO - FinalCNN(
+  (conv1): Conv2d(3, 12, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (bn1): BatchNorm2d(12, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (block1): BasicBlock(
+    (conv1): Conv2d(12, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (bn1): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (do1): Dropout(p=0.05, inplace=False)
+    (conv2): Conv2d(24, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=24, bias=False)
+    (bn2): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (do2): Dropout(p=0.05, inplace=False)
+    (conv3): Conv2d(24, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    (bn3): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (do3): Dropout(p=0.05, inplace=False)
+    (conv4): Conv2d(24, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (bn4): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (block2): BasicBlock(
+    (conv1): Conv2d(24, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (bn1): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (do1): Dropout(p=0.05, inplace=False)
+    (conv2): Conv2d(24, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=24, bias=False)
+    (bn2): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (do2): Dropout(p=0.05, inplace=False)
+    (conv3): Conv2d(24, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    (bn3): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (do3): Dropout(p=0.05, inplace=False)
+    (conv4): Conv2d(24, 24, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+    (bn4): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (block3): BasicBlock(
+    (conv1): Conv2d(24, 36, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (bn1): BatchNorm2d(36, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (do1): Dropout(p=0.05, inplace=False)
+    (conv2): Conv2d(36, 36, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=36, bias=False)
+    (bn2): BatchNorm2d(36, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (do2): Dropout(p=0.05, inplace=False)
+    (conv3): Conv2d(36, 36, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    (bn3): BatchNorm2d(36, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (do3): Dropout(p=0.05, inplace=False)
+    (conv4): Conv2d(36, 36, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (bn4): BatchNorm2d(36, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (block4): BasicBlock(
+    (conv1): Conv2d(36, 36, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (bn1): BatchNorm2d(36, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (do1): Dropout(p=0.05, inplace=False)
+    (conv2): Conv2d(36, 36, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=36, bias=False)
+    (bn2): BatchNorm2d(36, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (do2): Dropout(p=0.05, inplace=False)
+    (conv3): Conv2d(36, 36, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    (bn3): BatchNorm2d(36, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (do3): Dropout(p=0.05, inplace=False)
+    (conv4): Conv2d(36, 36, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+    (bn4): BatchNorm2d(36, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (block5): BasicBlock(
+    (conv1): Conv2d(36, 72, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (bn1): BatchNorm2d(72, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (do1): Dropout(p=0.05, inplace=False)
+    (conv2): Conv2d(72, 72, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=72, bias=False)
+    (bn2): BatchNorm2d(72, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (do2): Dropout(p=0.05, inplace=False)
+    (conv3): Conv2d(72, 72, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    (bn3): BatchNorm2d(72, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (do3): Dropout(p=0.05, inplace=False)
+    (conv4): Conv2d(72, 72, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (bn4): BatchNorm2d(72, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (global_avg_pool): AdaptiveAvgPool2d(output_size=(1, 1))
+  (fc): Linear(in_features=72, out_features=10, bias=True)
+)
+2025-10-08 07:33:33,416 - INFO - Approximate Receptive Field: 63x63
+2025-10-08 07:33:33,416 - INFO - Using learning rate 0.05
+2025-10-08 07:33:33,416 - INFO - 
+Optimizer: Cosine (lr=0.05)
+2025-10-08 07:33:33,416 - INFO - Using cosine scheduler
+2025-10-08 07:33:33,416 - INFO - Loss function: CrossEntropyLoss
+2025-10-08 07:33:33,416 - INFO - Training epochs: 30
+2025-10-08 07:33:33,416 - INFO - 
+============================================================
+2025-10-08 07:33:33,416 - INFO - STARTING TRAINING
+2025-10-08 07:33:33,416 - INFO - ============================================================
+2025-10-08 07:33:33,416 - INFO - 
+Epoch [1/30]
+2025-10-08 07:33:33,416 - INFO - ----------------------------------------
+2025-10-08 07:33:35,144 - INFO - Using device: cpu
+2025-10-08 07:33:36,872 - INFO - Using device: cpu
+2025-10-08 07:35:19,570 - INFO - Batch [100/391], Loss: 1.9920, Acc: 23.69%
+2025-10-08 07:37:02,389 - INFO - Batch [200/391], Loss: 1.7289, Acc: 29.06%
+2025-10-08 07:38:46,665 - INFO - Batch [300/391], Loss: 1.5796, Acc: 33.17%
+2025-10-08 07:40:34,176 - INFO - Using device: cpu
+2025-10-08 07:40:35,543 - INFO - Using device: cpu
+2025-10-08 07:40:54,497 - INFO - Using device: cpu
+2025-10-08 07:40:56,292 - INFO - Using device: cpu
+2025-10-08 07:41:41,337 - INFO - 
+Epoch 1 Summary:
+2025-10-08 07:41:41,337 - INFO - Train Accuracy: 36.01%
+2025-10-08 07:41:41,338 - INFO - Validation Accuracy: 44.11%
+2025-10-08 07:41:41,338 - INFO - Train Loss: 1.5765
+2025-10-08 07:41:41,338 - INFO - Validation Loss: 1.5451
+2025-10-08 07:41:41,338 - INFO - Time: 487.9s
+2025-10-08 07:41:41,338 - INFO - 
+Epoch [2/30]
+2025-10-08 07:41:41,339 - INFO - ----------------------------------------
+2025-10-08 07:41:43,173 - INFO - Using device: cpu
+2025-10-08 07:41:44,926 - INFO - Using device: cpu
+2025-10-08 07:43:31,450 - INFO - Batch [100/391], Loss: 1.3813, Acc: 49.55%
+2025-10-08 07:45:17,261 - INFO - Batch [200/391], Loss: 1.3228, Acc: 50.43%
+2025-10-08 07:47:00,934 - INFO - Batch [300/391], Loss: 1.2637, Acc: 51.63%
+2025-10-08 07:48:47,408 - INFO - Using device: cpu
+2025-10-08 07:48:48,813 - INFO - Using device: cpu
+2025-10-08 07:49:07,812 - INFO - Using device: cpu
+2025-10-08 07:49:09,576 - INFO - Using device: cpu
+2025-10-08 07:49:55,052 - INFO - 
+Epoch 2 Summary:
+2025-10-08 07:49:55,053 - INFO - Train Accuracy: 52.57%
+2025-10-08 07:49:55,053 - INFO - Validation Accuracy: 58.41%
+2025-10-08 07:49:55,053 - INFO - Train Loss: 1.2292
+2025-10-08 07:49:55,054 - INFO - Validation Loss: 1.1887
+2025-10-08 07:49:55,054 - INFO - Time: 493.7s
+2025-10-08 07:49:55,054 - INFO - 
+Epoch [3/30]
+2025-10-08 07:49:55,054 - INFO - ----------------------------------------
+2025-10-08 07:49:56,966 - INFO - Using device: cpu
+2025-10-08 07:49:58,688 - INFO - Using device: cpu
+2025-10-08 07:51:40,106 - INFO - Batch [100/391], Loss: 1.1571, Acc: 57.54%
+2025-10-08 07:58:52,398 - INFO - Batch [200/391], Loss: 1.1468, Acc: 58.26%
+2025-10-08 08:00:38,324 - INFO - Batch [300/391], Loss: 1.0991, Acc: 59.08%
+2025-10-08 08:02:25,105 - INFO - Using device: cpu
+2025-10-08 08:02:26,456 - INFO - Using device: cpu
+2025-10-08 08:04:14,380 - INFO - Using device: cpu
+2025-10-08 08:04:16,133 - INFO - Using device: cpu
+2025-10-08 08:05:03,894 - INFO - 
+Epoch 3 Summary:
+2025-10-08 08:05:03,894 - INFO - Train Accuracy: 59.41%
+2025-10-08 08:05:03,895 - INFO - Validation Accuracy: 61.03%
+2025-10-08 08:05:03,895 - INFO - Train Loss: 1.1127
+2025-10-08 08:05:03,895 - INFO - Validation Loss: 1.0763
+2025-10-08 08:05:03,895 - INFO - Time: 908.8s
+2025-10-08 08:05:03,895 - INFO - 
+Epoch [4/30]
+2025-10-08 08:05:03,895 - INFO - ----------------------------------------
+2025-10-08 08:05:06,311 - INFO - Using device: cpu
+2025-10-08 08:05:08,172 - INFO - Using device: cpu
+2025-10-08 08:06:50,354 - INFO - Batch [100/391], Loss: 1.0414, Acc: 62.92%
+2025-10-08 08:10:38,116 - INFO - Batch [200/391], Loss: 1.0067, Acc: 63.42%
+2025-10-08 08:12:19,856 - INFO - Batch [300/391], Loss: 1.0005, Acc: 63.71%
+2025-10-08 08:15:56,093 - INFO - Using device: cpu
+2025-10-08 08:15:57,457 - INFO - Using device: cpu
+2025-10-08 08:16:16,236 - INFO - Using device: cpu
+2025-10-08 08:16:17,974 - INFO - Using device: cpu
+2025-10-08 08:17:03,127 - INFO - 
+Epoch 4 Summary:
+2025-10-08 08:17:03,128 - INFO - Train Accuracy: 63.96%
+2025-10-08 08:17:03,128 - INFO - Validation Accuracy: 67.51%
+2025-10-08 08:17:03,128 - INFO - Train Loss: 0.9899
+2025-10-08 08:17:03,128 - INFO - Validation Loss: 0.9163
+2025-10-08 08:17:03,128 - INFO - Time: 719.2s
+2025-10-08 08:17:03,128 - INFO - 
+Epoch [5/30]
+2025-10-08 08:17:03,129 - INFO - ----------------------------------------
+2025-10-08 08:17:05,162 - INFO - Using device: cpu
+2025-10-08 08:17:07,041 - INFO - Using device: cpu
+2025-10-08 08:18:52,220 - INFO - Batch [100/391], Loss: 0.9579, Acc: 66.01%
+2025-10-08 08:20:37,310 - INFO - Batch [200/391], Loss: 0.9275, Acc: 66.47%
+2025-10-08 08:22:21,965 - INFO - Batch [300/391], Loss: 0.9429, Acc: 66.59%
