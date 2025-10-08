@@ -178,3 +178,521 @@ Epoch [5/30]
 2025-10-08 08:18:52,220 - INFO - Batch [100/391], Loss: 0.9579, Acc: 66.01%
 2025-10-08 08:20:37,310 - INFO - Batch [200/391], Loss: 0.9275, Acc: 66.47%
 2025-10-08 08:22:21,965 - INFO - Batch [300/391], Loss: 0.9429, Acc: 66.59%
+2025-10-08 08:24:07,930 - INFO - Using device: cpu
+2025-10-08 08:24:09,272 - INFO - Using device: cpu
+2025-10-08 08:24:27,995 - INFO - Using device: cpu
+2025-10-08 08:24:29,733 - INFO - Using device: cpu
+2025-10-08 08:25:14,600 - INFO - 
+Epoch 5 Summary:
+2025-10-08 08:25:14,601 - INFO - Train Accuracy: 66.78%
+2025-10-08 08:25:14,602 - INFO - Validation Accuracy: 69.03%
+2025-10-08 08:25:14,602 - INFO - Train Loss: 0.9570
+2025-10-08 08:25:14,602 - INFO - Validation Loss: 0.8879
+2025-10-08 08:25:14,602 - INFO - Time: 491.5s
+2025-10-08 08:25:14,602 - INFO - 
+Epoch [6/30]
+2025-10-08 08:25:14,602 - INFO - ----------------------------------------
+2025-10-08 08:25:16,596 - INFO - Using device: cpu
+2025-10-08 08:25:18,317 - INFO - Using device: cpu
+2025-10-08 08:30:11,918 - INFO - Batch [100/391], Loss: 0.8897, Acc: 68.66%
+2025-10-08 09:22:09,487 - INFO - Batch [200/391], Loss: 0.8846, Acc: 68.79%
+2025-10-08 10:47:16,995 - INFO - Batch [300/391], Loss: 0.8604, Acc: 69.07%
+2025-10-08 12:19:19,497 - INFO - Using device: cpu
+2025-10-08 12:19:21,135 - INFO - Using device: cpu
+2025-10-08 12:34:12,946 - INFO - Using device: cpu
+2025-10-08 12:34:15,171 - INFO - Using device: cpu
+2025-10-08 12:51:23,021 - INFO - 
+Epoch 6 Summary:
+2025-10-08 12:51:23,022 - INFO - Train Accuracy: 69.23%
+2025-10-08 12:51:23,022 - INFO - Validation Accuracy: 71.63%
+2025-10-08 12:51:23,022 - INFO - Train Loss: 0.8302
+2025-10-08 12:51:23,022 - INFO - Validation Loss: 0.8060
+2025-10-08 12:51:23,022 - INFO - Time: 15968.4s
+2025-10-08 12:51:23,022 - INFO - 
+Epoch [7/30]
+2025-10-08 12:51:23,022 - INFO - ----------------------------------------
+2025-10-08 12:51:25,704 - INFO - Using device: cpu
+2025-10-08 12:51:28,203 - INFO - Using device: cpu
+2025-10-08 14:06:12,374 - INFO - Batch [100/391], Loss: 0.8666, Acc: 69.96%
+2025-10-08 16:07:58,202 - INFO - Batch [200/391], Loss: 0.8436, Acc: 69.98%
+2025-10-08 17:31:03,626 - INFO - Batch [300/391], Loss: 0.8223, Acc: 70.43%
+2025-10-08 18:21:30,492 - INFO - Using device: cpu
+2025-10-08 18:21:32,118 - INFO - Using device: cpu
+2025-10-08 18:21:52,572 - INFO - Using device: cpu
+2025-10-08 18:21:54,426 - INFO - Using device: cpu
+2025-10-08 18:22:45,307 - INFO - 
+Epoch 7 Summary:
+2025-10-08 18:22:45,308 - INFO - Train Accuracy: 70.68%
+2025-10-08 18:22:45,308 - INFO - Validation Accuracy: 73.52%
+2025-10-08 18:22:45,308 - INFO - Train Loss: 0.8142
+2025-10-08 18:22:45,308 - INFO - Validation Loss: 0.7597
+2025-10-08 18:22:45,308 - INFO - Time: 19882.3s
+2025-10-08 18:22:45,308 - INFO - 
+Epoch [8/30]
+2025-10-08 18:22:45,308 - INFO - ----------------------------------------
+2025-10-08 18:22:47,406 - INFO - Using device: cpu
+2025-10-08 18:22:49,218 - INFO - Using device: cpu
+2025-10-08 18:24:32,347 - INFO - Batch [100/391], Loss: 0.8050, Acc: 71.38%
+2025-10-08 18:26:15,442 - INFO - Batch [200/391], Loss: 0.8152, Acc: 71.36%
+2025-10-08 18:27:58,261 - INFO - Batch [300/391], Loss: 0.8002, Acc: 71.62%
+2025-10-08 18:29:42,877 - INFO - Using device: cpu
+2025-10-08 18:29:44,236 - INFO - Using device: cpu
+2025-10-08 18:30:03,134 - INFO - Using device: cpu
+2025-10-08 18:30:04,938 - INFO - Using device: cpu
+2025-10-08 18:30:51,728 - INFO - 
+Epoch 8 Summary:
+2025-10-08 18:30:51,728 - INFO - Train Accuracy: 71.89%
+2025-10-08 18:30:51,728 - INFO - Validation Accuracy: 73.54%
+2025-10-08 18:30:51,729 - INFO - Train Loss: 0.7785
+2025-10-08 18:30:51,729 - INFO - Validation Loss: 0.7578
+2025-10-08 18:30:51,729 - INFO - Time: 486.4s
+2025-10-08 18:30:51,729 - INFO - 
+Epoch [9/30]
+2025-10-08 18:30:51,729 - INFO - ----------------------------------------
+2025-10-08 18:30:53,509 - INFO - Using device: cpu
+2025-10-08 18:30:55,293 - INFO - Using device: cpu
+2025-10-08 18:32:38,882 - INFO - Batch [100/391], Loss: 0.7765, Acc: 73.04%
+2025-10-08 18:34:21,032 - INFO - Batch [200/391], Loss: 0.7790, Acc: 72.93%
+2025-10-08 18:36:03,600 - INFO - Batch [300/391], Loss: 0.7781, Acc: 72.79%
+2025-10-08 18:37:47,760 - INFO - Using device: cpu
+2025-10-08 18:37:49,085 - INFO - Using device: cpu
+2025-10-08 18:38:07,799 - INFO - Using device: cpu
+2025-10-08 18:38:09,530 - INFO - Using device: cpu
+2025-10-08 18:38:54,329 - INFO - 
+Epoch 9 Summary:
+2025-10-08 18:38:54,329 - INFO - Train Accuracy: 73.03%
+2025-10-08 18:38:54,329 - INFO - Validation Accuracy: 74.82%
+2025-10-08 18:38:54,329 - INFO - Train Loss: 0.7503
+2025-10-08 18:38:54,330 - INFO - Validation Loss: 0.7193
+2025-10-08 18:38:54,330 - INFO - Time: 482.6s
+2025-10-08 18:38:54,330 - INFO - 
+Epoch [10/30]
+2025-10-08 18:38:54,330 - INFO - ----------------------------------------
+2025-10-08 18:38:56,087 - INFO - Using device: cpu
+2025-10-08 18:38:57,816 - INFO - Using device: cpu
+2025-10-08 18:40:40,145 - INFO - Batch [100/391], Loss: 0.7381, Acc: 74.00%
+2025-10-08 18:42:24,843 - INFO - Batch [200/391], Loss: 0.7601, Acc: 73.55%
+2025-10-08 18:44:07,922 - INFO - Batch [300/391], Loss: 0.7426, Acc: 73.83%
+2025-10-08 18:45:52,835 - INFO - Using device: cpu
+2025-10-08 18:45:54,204 - INFO - Using device: cpu
+2025-10-08 18:46:13,502 - INFO - Using device: cpu
+2025-10-08 18:46:15,219 - INFO - Using device: cpu
+2025-10-08 18:47:00,416 - INFO - 
+Epoch 10 Summary:
+2025-10-08 18:47:00,417 - INFO - Train Accuracy: 73.87%
+2025-10-08 18:47:00,417 - INFO - Validation Accuracy: 73.65%
+2025-10-08 18:47:00,417 - INFO - Train Loss: 0.7907
+2025-10-08 18:47:00,417 - INFO - Validation Loss: 0.7517
+2025-10-08 18:47:00,417 - INFO - Time: 486.1s
+2025-10-08 18:47:00,418 - INFO - 
+Epoch [11/30]
+2025-10-08 18:47:00,418 - INFO - ----------------------------------------
+2025-10-08 18:47:02,448 - INFO - Using device: cpu
+2025-10-08 18:47:04,187 - INFO - Using device: cpu
+2025-10-08 18:48:46,659 - INFO - Batch [100/391], Loss: 0.7257, Acc: 74.80%
+2025-10-08 18:50:29,071 - INFO - Batch [200/391], Loss: 0.7207, Acc: 74.89%
+2025-10-08 18:52:11,171 - INFO - Batch [300/391], Loss: 0.7221, Acc: 74.78%
+2025-10-08 18:53:56,337 - INFO - Using device: cpu
+2025-10-08 18:53:57,695 - INFO - Using device: cpu
+2025-10-08 18:54:16,796 - INFO - Using device: cpu
+2025-10-08 18:54:18,520 - INFO - Using device: cpu
+2025-10-08 18:55:03,905 - INFO - 
+Epoch 11 Summary:
+2025-10-08 18:55:03,906 - INFO - Train Accuracy: 74.68%
+2025-10-08 18:55:03,906 - INFO - Validation Accuracy: 78.54%
+2025-10-08 18:55:03,906 - INFO - Train Loss: 0.6626
+2025-10-08 18:55:03,907 - INFO - Validation Loss: 0.6275
+2025-10-08 18:55:03,907 - INFO - Time: 483.5s
+2025-10-08 18:55:03,907 - INFO - 
+Epoch [12/30]
+2025-10-08 18:55:03,907 - INFO - ----------------------------------------
+2025-10-08 18:55:05,670 - INFO - Using device: cpu
+2025-10-08 18:55:07,381 - INFO - Using device: cpu
+2025-10-08 18:56:51,157 - INFO - Batch [100/391], Loss: 0.7093, Acc: 75.14%
+2025-10-08 18:58:35,095 - INFO - Batch [200/391], Loss: 0.6846, Acc: 75.55%
+2025-10-08 19:00:18,631 - INFO - Batch [300/391], Loss: 0.7120, Acc: 75.50%
+2025-10-08 19:02:03,543 - INFO - Using device: cpu
+2025-10-08 19:02:04,860 - INFO - Using device: cpu
+2025-10-08 19:02:23,729 - INFO - Using device: cpu
+2025-10-08 19:02:25,529 - INFO - Using device: cpu
+2025-10-08 19:03:11,284 - INFO - 
+Epoch 12 Summary:
+2025-10-08 19:03:11,284 - INFO - Train Accuracy: 75.52%
+2025-10-08 19:03:11,284 - INFO - Validation Accuracy: 77.76%
+2025-10-08 19:03:11,284 - INFO - Train Loss: 0.6770
+2025-10-08 19:03:11,284 - INFO - Validation Loss: 0.6378
+2025-10-08 19:03:11,284 - INFO - Time: 487.4s
+2025-10-08 19:03:11,284 - INFO - 
+Epoch [13/30]
+2025-10-08 19:03:11,284 - INFO - ----------------------------------------
+2025-10-08 19:03:13,223 - INFO - Using device: cpu
+2025-10-08 19:03:14,958 - INFO - Using device: cpu
+2025-10-08 19:04:58,217 - INFO - Batch [100/391], Loss: 0.6873, Acc: 76.02%
+2025-10-08 19:06:43,820 - INFO - Batch [200/391], Loss: 0.6763, Acc: 76.24%
+2025-10-08 19:08:27,700 - INFO - Batch [300/391], Loss: 0.6792, Acc: 76.27%
+2025-10-08 19:10:13,756 - INFO - Using device: cpu
+2025-10-08 19:10:15,077 - INFO - Using device: cpu
+2025-10-08 19:10:33,904 - INFO - Using device: cpu
+2025-10-08 19:10:35,618 - INFO - Using device: cpu
+2025-10-08 19:11:20,654 - INFO - 
+Epoch 13 Summary:
+2025-10-08 19:11:20,655 - INFO - Train Accuracy: 76.17%
+2025-10-08 19:11:20,655 - INFO - Validation Accuracy: 79.45%
+2025-10-08 19:11:20,655 - INFO - Train Loss: 0.6220
+2025-10-08 19:11:20,655 - INFO - Validation Loss: 0.5894
+2025-10-08 19:11:20,655 - INFO - Time: 489.4s
+2025-10-08 19:11:20,656 - INFO - 
+Epoch [14/30]
+2025-10-08 19:11:20,656 - INFO - ----------------------------------------
+2025-10-08 19:11:22,621 - INFO - Using device: cpu
+2025-10-08 19:11:24,342 - INFO - Using device: cpu
+2025-10-08 19:28:18,679 - INFO - Batch [100/391], Loss: 0.6722, Acc: 76.60%
+2025-10-08 19:51:54,858 - INFO - Batch [200/391], Loss: 0.6679, Acc: 76.62%
+2025-10-08 19:56:55,843 - INFO - Batch [300/391], Loss: 0.6716, Acc: 76.84%
+2025-10-08 20:18:25,257 - INFO - Using device: cpu
+2025-10-08 20:18:26,587 - INFO - Using device: cpu
+2025-10-08 20:18:45,487 - INFO - Using device: cpu
+2025-10-08 20:18:47,158 - INFO - Using device: cpu
+2025-10-08 20:19:32,552 - INFO - 
+Epoch 14 Summary:
+2025-10-08 20:19:32,552 - INFO - Train Accuracy: 76.80%
+2025-10-08 20:19:32,553 - INFO - Validation Accuracy: 75.76%
+2025-10-08 20:19:32,553 - INFO - Train Loss: 0.7173
+2025-10-08 20:19:32,553 - INFO - Validation Loss: 0.7002
+2025-10-08 20:19:32,553 - INFO - Time: 4091.9s
+2025-10-08 20:19:32,553 - INFO - 
+Epoch [15/30]
+2025-10-08 20:19:32,554 - INFO - ----------------------------------------
+2025-10-08 20:19:34,370 - INFO - Using device: cpu
+2025-10-08 20:19:36,221 - INFO - Using device: cpu
+2025-10-08 20:21:20,609 - INFO - Batch [100/391], Loss: 0.6371, Acc: 77.95%
+2025-10-08 20:23:05,816 - INFO - Batch [200/391], Loss: 0.6458, Acc: 77.71%
+2025-10-08 20:24:50,617 - INFO - Batch [300/391], Loss: 0.6531, Acc: 77.51%
+2025-10-08 20:26:38,148 - INFO - Using device: cpu
+2025-10-08 20:26:39,538 - INFO - Using device: cpu
+2025-10-08 20:26:58,737 - INFO - Using device: cpu
+2025-10-08 20:27:00,531 - INFO - Using device: cpu
+2025-10-08 20:27:46,992 - INFO - 
+Epoch 15 Summary:
+2025-10-08 20:27:46,993 - INFO - Train Accuracy: 77.43%
+2025-10-08 20:27:46,993 - INFO - Validation Accuracy: 78.94%
+2025-10-08 20:27:46,993 - INFO - Train Loss: 0.6626
+2025-10-08 20:27:46,993 - INFO - Validation Loss: 0.6029
+2025-10-08 20:27:46,993 - INFO - Time: 494.4s
+2025-10-08 20:27:46,994 - INFO - 
+Epoch [16/30]
+2025-10-08 20:27:46,994 - INFO - ----------------------------------------
+2025-10-08 20:27:48,931 - INFO - Using device: cpu
+2025-10-08 20:27:50,714 - INFO - Using device: cpu
+2025-10-08 20:29:34,564 - INFO - Batch [100/391], Loss: 0.6120, Acc: 78.97%
+2025-10-08 20:31:18,486 - INFO - Batch [200/391], Loss: 0.6248, Acc: 78.41%
+2025-10-08 20:33:02,117 - INFO - Batch [300/391], Loss: 0.6321, Acc: 78.32%
+2025-10-08 20:34:48,155 - INFO - Using device: cpu
+2025-10-08 20:34:49,523 - INFO - Using device: cpu
+2025-10-08 20:35:08,664 - INFO - Using device: cpu
+2025-10-08 20:35:10,446 - INFO - Using device: cpu
+2025-10-08 20:35:57,572 - INFO - 
+Epoch 16 Summary:
+2025-10-08 20:35:57,573 - INFO - Train Accuracy: 78.18%
+2025-10-08 20:35:57,573 - INFO - Validation Accuracy: 78.14%
+2025-10-08 20:35:57,573 - INFO - Train Loss: 0.6485
+2025-10-08 20:35:57,573 - INFO - Validation Loss: 0.6398
+2025-10-08 20:35:57,573 - INFO - Time: 490.6s
+2025-10-08 20:35:57,573 - INFO - 
+Epoch [17/30]
+2025-10-08 20:35:57,574 - INFO - ----------------------------------------
+2025-10-08 20:35:59,578 - INFO - Using device: cpu
+2025-10-08 20:36:01,334 - INFO - Using device: cpu
+2025-10-08 20:37:45,958 - INFO - Batch [100/391], Loss: 0.6088, Acc: 78.84%
+2025-10-08 20:39:30,616 - INFO - Batch [200/391], Loss: 0.6061, Acc: 78.95%
+2025-10-08 20:41:15,135 - INFO - Batch [300/391], Loss: 0.6107, Acc: 78.92%
+2025-10-08 20:43:01,563 - INFO - Using device: cpu
+2025-10-08 20:43:02,936 - INFO - Using device: cpu
+2025-10-08 20:43:22,112 - INFO - Using device: cpu
+2025-10-08 20:43:23,883 - INFO - Using device: cpu
+2025-10-08 20:44:10,253 - INFO - 
+Epoch 17 Summary:
+2025-10-08 20:44:10,254 - INFO - Train Accuracy: 78.82%
+2025-10-08 20:44:10,254 - INFO - Validation Accuracy: 77.09%
+2025-10-08 20:44:10,254 - INFO - Train Loss: 0.6511
+2025-10-08 20:44:10,254 - INFO - Validation Loss: 0.6683
+2025-10-08 20:44:10,254 - INFO - Time: 492.7s
+2025-10-08 20:44:10,254 - INFO - 
+Epoch [18/30]
+2025-10-08 20:44:10,254 - INFO - ----------------------------------------
+2025-10-08 20:44:12,118 - INFO - Using device: cpu
+2025-10-08 20:44:14,012 - INFO - Using device: cpu
+2025-10-08 20:45:58,245 - INFO - Batch [100/391], Loss: 0.5922, Acc: 79.48%
+2025-10-08 20:47:42,321 - INFO - Batch [200/391], Loss: 0.5852, Acc: 79.68%
+2025-10-08 20:49:27,086 - INFO - Batch [300/391], Loss: 0.5973, Acc: 79.62%
+2025-10-08 20:51:13,752 - INFO - Using device: cpu
+2025-10-08 20:51:15,119 - INFO - Using device: cpu
+2025-10-08 20:51:34,378 - INFO - Using device: cpu
+2025-10-08 20:51:36,148 - INFO - Using device: cpu
+2025-10-08 20:52:22,883 - INFO - 
+Epoch 18 Summary:
+2025-10-08 20:52:22,884 - INFO - Train Accuracy: 79.43%
+2025-10-08 20:52:22,884 - INFO - Validation Accuracy: 81.89%
+2025-10-08 20:52:22,884 - INFO - Train Loss: 0.5302
+2025-10-08 20:52:22,885 - INFO - Validation Loss: 0.5309
+2025-10-08 20:52:22,885 - INFO - Time: 492.6s
+2025-10-08 20:52:22,885 - INFO - 
+Epoch [19/30]
+2025-10-08 20:52:22,885 - INFO - ----------------------------------------
+2025-10-08 20:52:24,678 - INFO - Using device: cpu
+2025-10-08 20:52:26,462 - INFO - Using device: cpu
+2025-10-08 20:54:10,921 - INFO - Batch [100/391], Loss: 0.5777, Acc: 79.91%
+2025-10-08 20:55:55,383 - INFO - Batch [200/391], Loss: 0.5847, Acc: 79.82%
+2025-10-08 20:57:39,822 - INFO - Batch [300/391], Loss: 0.5713, Acc: 80.00%
+2025-10-08 20:59:26,013 - INFO - Using device: cpu
+2025-10-08 20:59:27,374 - INFO - Using device: cpu
+2025-10-08 20:59:46,536 - INFO - Using device: cpu
+2025-10-08 20:59:48,324 - INFO - Using device: cpu
+2025-10-08 21:00:34,421 - INFO - 
+Epoch 19 Summary:
+2025-10-08 21:00:34,422 - INFO - Train Accuracy: 79.95%
+2025-10-08 21:00:34,422 - INFO - Validation Accuracy: 80.94%
+2025-10-08 21:00:34,422 - INFO - Train Loss: 0.5402
+2025-10-08 21:00:34,422 - INFO - Validation Loss: 0.5474
+2025-10-08 21:00:34,422 - INFO - Time: 491.5s
+2025-10-08 21:00:34,422 - INFO - 
+Epoch [20/30]
+2025-10-08 21:00:34,422 - INFO - ----------------------------------------
+2025-10-08 21:00:36,481 - INFO - Using device: cpu
+2025-10-08 21:00:38,306 - INFO - Using device: cpu
+2025-10-08 21:02:22,603 - INFO - Batch [100/391], Loss: 0.5573, Acc: 80.65%
+2025-10-08 21:04:07,195 - INFO - Batch [200/391], Loss: 0.5634, Acc: 80.50%
+2025-10-08 21:05:52,098 - INFO - Batch [300/391], Loss: 0.5501, Acc: 80.66%
+2025-10-08 21:07:38,566 - INFO - Using device: cpu
+2025-10-08 21:07:39,949 - INFO - Using device: cpu
+2025-10-08 21:07:59,183 - INFO - Using device: cpu
+2025-10-08 21:08:00,967 - INFO - Using device: cpu
+2025-10-08 21:08:47,420 - INFO - 
+Epoch 20 Summary:
+2025-10-08 21:08:47,421 - INFO - Train Accuracy: 80.77%
+2025-10-08 21:08:47,421 - INFO - Validation Accuracy: 81.11%
+2025-10-08 21:08:47,421 - INFO - Train Loss: 0.5342
+2025-10-08 21:08:47,422 - INFO - Validation Loss: 0.5552
+2025-10-08 21:08:47,422 - INFO - Time: 493.0s
+2025-10-08 21:08:47,422 - INFO - 
+Epoch [21/30]
+2025-10-08 21:08:47,422 - INFO - ----------------------------------------
+2025-10-08 21:08:49,485 - INFO - Using device: cpu
+2025-10-08 21:08:51,262 - INFO - Using device: cpu
+2025-10-08 21:10:36,232 - INFO - Batch [100/391], Loss: 0.5432, Acc: 81.30%
+2025-10-08 21:12:21,208 - INFO - Batch [200/391], Loss: 0.5491, Acc: 81.04%
+2025-10-08 21:14:05,179 - INFO - Batch [300/391], Loss: 0.5501, Acc: 80.93%
+2025-10-08 21:15:51,565 - INFO - Using device: cpu
+2025-10-08 21:15:52,952 - INFO - Using device: cpu
+2025-10-08 21:16:12,201 - INFO - Using device: cpu
+2025-10-08 21:16:14,006 - INFO - Using device: cpu
+2025-10-08 21:17:00,524 - INFO - 
+Epoch 21 Summary:
+2025-10-08 21:17:00,525 - INFO - Train Accuracy: 81.07%
+2025-10-08 21:17:00,525 - INFO - Validation Accuracy: 83.54%
+2025-10-08 21:17:00,525 - INFO - Train Loss: 0.4780
+2025-10-08 21:17:00,525 - INFO - Validation Loss: 0.4826
+2025-10-08 21:17:00,525 - INFO - Time: 493.1s
+2025-10-08 21:17:00,525 - INFO - 
+Epoch [22/30]
+2025-10-08 21:17:00,525 - INFO - ----------------------------------------
+2025-10-08 21:17:02,515 - INFO - Using device: cpu
+2025-10-08 21:17:04,286 - INFO - Using device: cpu
+2025-10-08 21:18:48,610 - INFO - Batch [100/391], Loss: 0.5250, Acc: 81.61%
+2025-10-08 21:20:32,869 - INFO - Batch [200/391], Loss: 0.5189, Acc: 81.95%
+2025-10-08 21:22:16,374 - INFO - Batch [300/391], Loss: 0.5099, Acc: 82.09%
+2025-10-08 21:24:03,156 - INFO - Using device: cpu
+2025-10-08 21:24:04,527 - INFO - Using device: cpu
+2025-10-08 21:24:23,614 - INFO - Using device: cpu
+2025-10-08 21:24:25,392 - INFO - Using device: cpu
+2025-10-08 21:25:11,910 - INFO - 
+Epoch 22 Summary:
+2025-10-08 21:25:11,911 - INFO - Train Accuracy: 82.07%
+2025-10-08 21:25:11,912 - INFO - Validation Accuracy: 83.79%
+2025-10-08 21:25:11,912 - INFO - Train Loss: 0.4692
+2025-10-08 21:25:11,912 - INFO - Validation Loss: 0.4755
+2025-10-08 21:25:11,912 - INFO - Time: 491.4s
+2025-10-08 21:25:11,912 - INFO - 
+Epoch [23/30]
+2025-10-08 21:25:11,913 - INFO - ----------------------------------------
+2025-10-08 21:25:14,052 - INFO - Using device: cpu
+2025-10-08 21:25:15,781 - INFO - Using device: cpu
+2025-10-08 21:26:57,676 - INFO - Batch [100/391], Loss: 0.5062, Acc: 82.34%
+2025-10-08 21:28:39,809 - INFO - Batch [200/391], Loss: 0.5194, Acc: 82.29%
+2025-10-08 21:30:21,507 - INFO - Batch [300/391], Loss: 0.4911, Acc: 82.51%
+2025-10-08 21:32:05,594 - INFO - Using device: cpu
+2025-10-08 21:32:06,928 - INFO - Using device: cpu
+2025-10-08 21:32:25,842 - INFO - Using device: cpu
+2025-10-08 21:32:27,571 - INFO - Using device: cpu
+2025-10-08 21:33:12,064 - INFO - 
+Epoch 23 Summary:
+2025-10-08 21:33:12,065 - INFO - Train Accuracy: 82.51%
+2025-10-08 21:33:12,065 - INFO - Validation Accuracy: 84.44%
+2025-10-08 21:33:12,065 - INFO - Train Loss: 0.4260
+2025-10-08 21:33:12,066 - INFO - Validation Loss: 0.4449
+2025-10-08 21:33:12,066 - INFO - Time: 480.2s
+2025-10-08 21:33:12,066 - INFO - 
+Epoch [24/30]
+2025-10-08 21:33:12,066 - INFO - ----------------------------------------
+2025-10-08 21:33:13,856 - INFO - Using device: cpu
+2025-10-08 21:33:15,557 - INFO - Using device: cpu
+2025-10-08 21:34:58,120 - INFO - Batch [100/391], Loss: 0.4778, Acc: 83.54%
+2025-10-08 21:36:40,770 - INFO - Batch [200/391], Loss: 0.4908, Acc: 83.23%
+2025-10-08 21:38:23,282 - INFO - Batch [300/391], Loss: 0.4888, Acc: 83.18%
+2025-10-08 21:40:07,770 - INFO - Using device: cpu
+2025-10-08 21:40:09,084 - INFO - Using device: cpu
+2025-10-08 21:40:27,819 - INFO - Using device: cpu
+2025-10-08 21:40:29,536 - INFO - Using device: cpu
+2025-10-08 21:41:14,432 - INFO - 
+Epoch 24 Summary:
+2025-10-08 21:41:14,433 - INFO - Train Accuracy: 83.15%
+2025-10-08 21:41:14,433 - INFO - Validation Accuracy: 85.00%
+2025-10-08 21:41:14,433 - INFO - Train Loss: 0.4106
+2025-10-08 21:41:14,433 - INFO - Validation Loss: 0.4464
+2025-10-08 21:41:14,433 - INFO - Time: 482.4s
+2025-10-08 21:41:14,433 - INFO - 
+Epoch [25/30]
+2025-10-08 21:41:14,433 - INFO - ----------------------------------------
+2025-10-08 21:41:16,172 - INFO - Using device: cpu
+2025-10-08 21:41:17,878 - INFO - Using device: cpu
+2025-10-08 21:43:00,091 - INFO - Batch [100/391], Loss: 0.4694, Acc: 83.73%
+2025-10-08 21:44:41,943 - INFO - Batch [200/391], Loss: 0.4720, Acc: 83.69%
+2025-10-08 21:46:24,407 - INFO - Batch [300/391], Loss: 0.4791, Acc: 83.60%
+2025-10-08 21:48:08,931 - INFO - Using device: cpu
+2025-10-08 21:48:10,250 - INFO - Using device: cpu
+2025-10-08 21:48:28,920 - INFO - Using device: cpu
+2025-10-08 21:48:30,669 - INFO - Using device: cpu
+2025-10-08 21:49:14,897 - INFO - 
+Epoch 25 Summary:
+2025-10-08 21:49:14,898 - INFO - Train Accuracy: 83.43%
+2025-10-08 21:49:14,898 - INFO - Validation Accuracy: 85.26%
+2025-10-08 21:49:14,898 - INFO - Train Loss: 0.3991
+2025-10-08 21:49:14,898 - INFO - Validation Loss: 0.4362
+2025-10-08 21:49:14,898 - INFO - Time: 480.5s
+2025-10-08 21:49:14,899 - INFO - 
+Epoch [26/30]
+2025-10-08 21:49:14,899 - INFO - ----------------------------------------
+2025-10-08 21:49:16,630 - INFO - Using device: cpu
+2025-10-08 21:49:18,349 - INFO - Using device: cpu
+2025-10-08 21:51:00,681 - INFO - Batch [100/391], Loss: 0.4619, Acc: 84.20%
+2025-10-08 21:52:43,265 - INFO - Batch [200/391], Loss: 0.4608, Acc: 84.19%
+2025-10-08 21:54:25,867 - INFO - Batch [300/391], Loss: 0.4623, Acc: 84.14%
+2025-10-08 21:56:11,678 - INFO - Using device: cpu
+2025-10-08 21:56:13,074 - INFO - Using device: cpu
+2025-10-08 21:56:32,240 - INFO - Using device: cpu
+2025-10-08 21:56:34,030 - INFO - Using device: cpu
+2025-10-08 21:57:19,638 - INFO - 
+Epoch 26 Summary:
+2025-10-08 21:57:19,639 - INFO - Train Accuracy: 84.23%
+2025-10-08 21:57:19,639 - INFO - Validation Accuracy: 85.48%
+2025-10-08 21:57:19,639 - INFO - Train Loss: 0.3874
+2025-10-08 21:57:19,639 - INFO - Validation Loss: 0.4258
+2025-10-08 21:57:19,639 - INFO - Time: 484.7s
+2025-10-08 21:57:19,639 - INFO - 
+Epoch [27/30]
+2025-10-08 21:57:19,639 - INFO - ----------------------------------------
+2025-10-08 21:57:21,551 - INFO - Using device: cpu
+2025-10-08 21:57:23,283 - INFO - Using device: cpu
+2025-10-08 21:59:08,677 - INFO - Batch [100/391], Loss: 0.4471, Acc: 84.87%
+2025-10-08 22:00:53,359 - INFO - Batch [200/391], Loss: 0.4515, Acc: 84.64%
+2025-10-08 22:02:37,760 - INFO - Batch [300/391], Loss: 0.4468, Acc: 84.65%
+2025-10-08 22:04:24,627 - INFO - Using device: cpu
+2025-10-08 22:04:25,998 - INFO - Using device: cpu
+2025-10-08 22:04:45,342 - INFO - Using device: cpu
+2025-10-08 22:04:47,111 - INFO - Using device: cpu
+2025-10-08 22:05:33,602 - INFO - 
+Epoch 27 Summary:
+2025-10-08 22:05:33,602 - INFO - Train Accuracy: 84.70%
+2025-10-08 22:05:33,602 - INFO - Validation Accuracy: 85.75%
+2025-10-08 22:05:33,603 - INFO - Train Loss: 0.3716
+2025-10-08 22:05:33,603 - INFO - Validation Loss: 0.4181
+2025-10-08 22:05:33,603 - INFO - Time: 494.0s
+2025-10-08 22:05:33,603 - INFO - 
+Epoch [28/30]
+2025-10-08 22:05:33,603 - INFO - ----------------------------------------
+2025-10-08 22:05:35,447 - INFO - Using device: cpu
+2025-10-08 22:05:37,236 - INFO - Using device: cpu
+2025-10-08 22:07:22,563 - INFO - Batch [100/391], Loss: 0.4447, Acc: 84.80%
+2025-10-08 22:09:06,694 - INFO - Batch [200/391], Loss: 0.4466, Acc: 84.57%
+2025-10-08 22:10:52,089 - INFO - Batch [300/391], Loss: 0.4302, Acc: 84.76%
+2025-10-08 22:12:39,589 - INFO - Using device: cpu
+2025-10-08 22:12:41,046 - INFO - Using device: cpu
+2025-10-08 22:13:01,022 - INFO - Using device: cpu
+2025-10-08 22:13:02,795 - INFO - Using device: cpu
+2025-10-08 22:13:49,264 - INFO - 
+Epoch 28 Summary:
+2025-10-08 22:13:49,264 - INFO - Train Accuracy: 84.82%
+2025-10-08 22:13:49,264 - INFO - Validation Accuracy: 86.33%
+2025-10-08 22:13:49,265 - INFO - Train Loss: 0.3679
+2025-10-08 22:13:49,265 - INFO - Validation Loss: 0.4077
+2025-10-08 22:13:49,265 - INFO - Time: 495.7s
+2025-10-08 22:13:49,265 - INFO - 
+Epoch [29/30]
+2025-10-08 22:13:49,265 - INFO - ----------------------------------------
+2025-10-08 22:13:51,421 - INFO - Using device: cpu
+2025-10-08 22:13:53,217 - INFO - Using device: cpu
+2025-10-08 22:15:38,430 - INFO - Batch [100/391], Loss: 0.4333, Acc: 85.10%
+2025-10-08 22:17:23,376 - INFO - Batch [200/391], Loss: 0.4268, Acc: 85.09%
+2025-10-08 23:04:28,770 - INFO - Batch [300/391], Loss: 0.4394, Acc: 84.92%
+2025-10-09 00:19:05,097 - INFO - Using device: cpu
+2025-10-09 00:19:07,053 - INFO - Using device: cpu
+2025-10-09 00:34:29,286 - INFO - Using device: cpu
+2025-10-09 00:34:31,442 - INFO - Using device: cpu
+2025-10-09 01:20:43,745 - INFO - 
+Epoch 29 Summary:
+2025-10-09 01:20:43,746 - INFO - Train Accuracy: 84.94%
+2025-10-09 01:20:43,746 - INFO - Validation Accuracy: 86.25%
+2025-10-09 01:20:43,746 - INFO - Train Loss: 0.3617
+2025-10-09 01:20:43,746 - INFO - Validation Loss: 0.4080
+2025-10-09 01:20:43,747 - INFO - Time: 11214.5s
+2025-10-09 01:20:43,747 - INFO - 
+Epoch [30/30]
+2025-10-09 01:20:43,747 - INFO - ----------------------------------------
+2025-10-09 01:20:46,577 - INFO - Using device: cpu
+2025-10-09 01:20:48,712 - INFO - Using device: cpu
+2025-10-09 02:23:04,245 - INFO - Batch [100/391], Loss: 0.4291, Acc: 85.02%
+2025-10-09 03:42:36,288 - INFO - Batch [200/391], Loss: 0.4339, Acc: 85.06%
+2025-10-09 04:56:51,293 - INFO - Batch [300/391], Loss: 0.4252, Acc: 85.11%
+2025-10-09 05:06:22,820 - INFO - Using device: cpu
+2025-10-09 05:06:24,192 - INFO - Using device: cpu
+2025-10-09 05:06:42,859 - INFO - Using device: cpu
+2025-10-09 05:06:44,525 - INFO - Using device: cpu
+2025-10-09 05:07:29,841 - INFO - 
+Epoch 30 Summary:
+2025-10-09 05:07:29,842 - INFO - Train Accuracy: 85.10%
+2025-10-09 05:07:29,842 - INFO - Validation Accuracy: 86.14%
+2025-10-09 05:07:29,842 - INFO - Train Loss: 0.3586
+2025-10-09 05:07:29,842 - INFO - Validation Loss: 0.4077
+2025-10-09 05:07:29,842 - INFO - Time: 13606.1s
+2025-10-09 05:07:29,843 - INFO - 
+============================================================
+2025-10-09 05:07:29,843 - INFO - TRAINING COMPLETED
+2025-10-09 05:07:29,843 - INFO - ============================================================
+2025-10-09 05:07:29,843 - INFO - Final Validation Accuracy: 86.14%
+2025-10-09 05:07:29,843 - INFO - Best Validation Accuracy: 86.33% (Epoch 28)
+2025-10-09 05:07:29,843 - INFO - Total Parameters: 144,166
+2025-10-09 05:07:29,843 - INFO - 
+Generating training plots...
+2025-10-09 05:07:30,765 - INFO - Training progress plots saved to model/training_progress.png
+2025-10-09 05:07:30,765 - INFO - 
+Per-class accuracy:
+2025-10-09 05:07:32,388 - INFO - Using device: cpu
+2025-10-09 05:07:33,693 - INFO - Using device: cpu
+2025-10-09 05:07:50,799 - INFO - airplane: 88.8%
+2025-10-09 05:07:50,800 - INFO - automobile: 94.2%
+2025-10-09 05:07:50,800 - INFO - bird: 77.3%
+2025-10-09 05:07:50,800 - INFO - cat: 70.2%
+2025-10-09 05:07:50,800 - INFO - deer: 87.6%
+2025-10-09 05:07:50,800 - INFO - dog: 74.9%
+2025-10-09 05:07:50,800 - INFO - frog: 90.9%
+2025-10-09 05:07:50,800 - INFO - horse: 91.8%
+2025-10-09 05:07:50,800 - INFO - ship: 93.0%
+2025-10-09 05:07:50,800 - INFO - truck: 92.7%
+2025-10-09 05:07:50,800 - INFO - 
+Baseline model performance summary:
+2025-10-09 05:07:50,800 - INFO - • Architecture: 5-block CNN (ResNet-inspired)
+2025-10-09 05:07:50,800 - INFO - • No data augmentation
+2025-10-09 05:07:50,800 - INFO - • No max pooling (used stride and global avg pooling)
+2025-10-09 05:07:50,801 - INFO - • Simple SGD optimizer (cosine scheduler)
+2025-10-09 05:07:50,801 - INFO - • Final accuracy: 86.14%
+2025-10-09 05:07:50,801 - INFO - • Parameters: 144,166
