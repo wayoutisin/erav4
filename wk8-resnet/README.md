@@ -504,3 +504,255 @@ Best validation accuracy: 73.19%
 Training completed!
 Best validation accuracy: 73.19%
 ```
+
+## HuggingFace Spaces App
+### Step 1: Prepare Your Model and Files
+- Save your trained model in a format that's easy to load (e.g., .pth for PyTorch, .h5 for TensorFlow)
+- Create a requirements.txt file listing all Python dependencies needed to run your model
+
+### Step 2: Create a HuggingFace Account
+- Go to https://huggingface.co/
+- Click "Sign Up" and create a free account
+- Verify your email address
+
+### Step 3: Create a New Space
+- Once logged in, click on your profile picture (top right)
+- Select "New Space"
+- Fill in the details:
+  - Space name: Choose a descriptive name
+  - License: Select appropriate license (e.g., MIT)
+  - Select the SDK: Choose between:
+    - Gradio (recommended for beginners - easier interface)
+    - Streamlit (more customizable)
+    - Static HTML (for static demos)
+- Choose visibility: Public or Private
+- Click "Create Space"
+
+### Step 4: Start by Cloning the Repo
+```
+# When prompted for a password, use an access token with write permissions.
+# Generate one from your settings: https://huggingface.co/settings/tokens
+git clone https://huggingface.co/spaces/wayoutisin/resnet56
+```
+- Add requirements.txt
+```
+# Python version: >=3.12
+
+matplotlib>=3.10.7
+opencv-python>=4.12.0.88
+torch>=2.8.0
+torchvision>=0.23.0
+tqdm>=4.67.1
+```
+- Add model file (.pth)
+- Add the following code as app.py
+```
+import gradio as gr
+import torch
+import torch.nn as nn
+from torchvision import transforms
+from PIL import Image
+import sys
+
+print("Starting application...", flush=True)
+print(f"Python version: {sys.version}", flush=True)
+print(f"PyTorch version: {torch.__version__}", flush=True)
+print(f"CUDA available: {torch.cuda.is_available()}", flush=True)
+
+# Define your ResNet56 architecture
+class BasicBlock(nn.Module):
+    def __init__(self, in_channels, out_channels, stride=1):
+        super(BasicBlock, self).__init__()
+        self.conv1 = nn.Conv2d(in_channels, out_channels, kernel_size=3, stride=stride, padding=1, bias=False)
+        self.bn1 = nn.BatchNorm2d(out_channels)
+        self.relu = nn.ReLU(inplace=True)
+        self.conv2 = nn.Conv2d(out_channels, out_channels, kernel_size=3, stride=1, padding=1, bias=False)
+        self.bn2 = nn.BatchNorm2d(out_channels)
+        
+        self.shortcut = nn.Sequential()
+        if stride != 1 or in_channels != out_channels:
+            self.shortcut = nn.Sequential(
+                nn.Conv2d(in_channels, out_channels, kernel_size=1, stride=stride, bias=False),
+                nn.BatchNorm2d(out_channels)
+            )
+    
+    def forward(self, x):
+        out = self.relu(self.bn1(self.conv1(x)))
+        out = self.bn2(self.conv2(out))
+        out += self.shortcut(x)
+        out = self.relu(out)
+        return out
+
+class ResNet56(nn.Module):
+    def __init__(self, num_classes=10):
+        super(ResNet56, self).__init__()
+        self.in_channels = 16
+        
+        self.conv1 = nn.Conv2d(3, 16, kernel_size=3, stride=1, padding=1, bias=False)
+        self.bn1 = nn.BatchNorm2d(16)
+        self.relu = nn.ReLU(inplace=True)
+        
+        self.layer1 = self._make_layer(16, 9, stride=1)
+        self.layer2 = self._make_layer(32, 9, stride=2)
+        self.layer3 = self._make_layer(64, 9, stride=2)
+        
+        self.avgpool = nn.AdaptiveAvgPool2d((1, 1))
+        self.fc = nn.Linear(64, num_classes)
+    
+    def _make_layer(self, out_channels, num_blocks, stride):
+        layers = []
+        layers.append(BasicBlock(self.in_channels, out_channels, stride))
+        self.in_channels = out_channels
+        for _ in range(1, num_blocks):
+            layers.append(BasicBlock(out_channels, out_channels))
+        return nn.Sequential(*layers)
+    
+    def forward(self, x):
+        out = self.relu(self.bn1(self.conv1(x)))
+        out = self.layer1(out)
+        out = self.layer2(out)
+        out = self.layer3(out)
+        out = self.avgpool(out)
+        out = out.view(out.size(0), -1)
+        out = self.fc(out)
+        return out
+
+print("Loading model...", flush=True)
+
+try:
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    print(f"Using device: {device}", flush=True)
+    
+    # Initialize model architecture
+    model = ResNet56(num_classes=10)
+    print("Model architecture created", flush=True)
+    
+    # Load the saved weights
+    print("Loading checkpoint...", flush=True)
+    checkpoint = torch.load('best_model.pth', map_location=device)
+    print(f"Checkpoint type: {type(checkpoint)}", flush=True)
+    
+    # Handle different save formats
+    if isinstance(checkpoint, dict):
+        if 'model_state_dict' in checkpoint:
+            model.load_state_dict(checkpoint['model_state_dict'])
+            print("Loaded from model_state_dict", flush=True)
+        elif 'state_dict' in checkpoint:
+            model.load_state_dict(checkpoint['state_dict'])
+            print("Loaded from state_dict", flush=True)
+        else:
+            model.load_state_dict(checkpoint)
+            print("Loaded checkpoint dict directly", flush=True)
+    else:
+        # If the entire model was saved
+        model = checkpoint
+        print("Loaded entire model", flush=True)
+    
+    model = model.to(device)
+    model.eval()
+    print("Model loaded successfully!", flush=True)
+    
+except Exception as e:
+    print(f"ERROR loading model: {e}", flush=True)
+    import traceback
+    traceback.print_exc()
+    # Create a dummy model so the app can still start
+    model = ResNet56(num_classes=10).to(device)
+    print("Using untrained model due to loading error", flush=True)
+
+# Define preprocessing
+transform = transforms.Compose([
+    transforms.Resize((32, 32)),
+    transforms.ToTensor(),
+    transforms.Normalize(mean=[0.4914, 0.4822, 0.4465], 
+                        std=[0.2470, 0.2435, 0.2616])
+])
+
+# Class names
+class_names = ['airplane', 'automobile', 'bird', 'cat', 'deer', 
+               'dog', 'frog', 'horse', 'ship', 'truck']
+
+def predict(image):
+    if image is None:
+        return {"error": "No image provided"}
+    
+    try:
+        print("Processing image...", flush=True)
+        img_tensor = transform(image).unsqueeze(0).to(device)
+        
+        with torch.no_grad():
+            outputs = model(img_tensor)
+            probabilities = torch.nn.functional.softmax(outputs[0], dim=0)
+        
+        results = {class_names[i]: float(probabilities[i]) for i in range(len(class_names))}
+        print(f"Prediction complete: {max(results, key=results.get)}", flush=True)
+        
+        return results
+    
+    except Exception as e:
+        print(f"ERROR in prediction: {e}", flush=True)
+        return {"error": f"Prediction failed: {str(e)}"}
+
+print("Creating Gradio interface...", flush=True)
+
+# Create Gradio interface
+demo = gr.Interface(
+    fn=predict,
+    inputs=gr.Image(type="pil"),
+    outputs=gr.Label(num_top_classes=3),
+    title="ResNet56 Image Classifier",
+    description="Upload an image to classify it using ResNet56 trained on CIFAR-10",
+    theme=gr.themes.Soft()
+)
+
+print("Launching demo...", flush=True)
+
+if __name__ == "__main__":
+    demo.launch()
+    
+print("Demo launched!", flush=True)
+```
+### Step 5: Large File System
+```
+brew install git-lfs
+git lfs install
+```
+
+### Step 6: Push your change
+```
+git add .
+git commit -m "Initial commit"
+git push
+```
+- If you face issues in pushing the code to remote then it could be due to  
+  - Authentication Problems
+    - Your credentials might have expired or be incorrect
+    - For Hugging Face, use your access token as the password, not your account password
+    - Get a token from: https://huggingface.co/settings/tokens
+    - Try: git remote set-url origin https://USER:TOKEN@huggingface.co/spaces/USER/REPO
+  - Track with LFS
+    ```
+    git lfs track "*.pth"
+    git add .gitattributes
+    git commit -m "Add LFS tracking"
+
+    # 3. Migrate all .pth files in history to LFS
+    git lfs migrate import --include="*.pth" --everything
+
+    # 4. Force push (be careful - this rewrites history)
+    git push --force
+    ```
+
+### Step 7: Wait for Build
+- HuggingFace will automatically build your Space
+- Watch the build logs in the "Logs" section
+- Fix any errors that appear and push updates
+
+### Step 8: Test Your Demo
+- Once the build succeeds, your Space will be live
+- The URL will be: https://huggingface.co/spaces/YOUR_USERNAME/YOUR_SPACE_NAME
+- Test all functionality to ensure it works correctly
+
+### Step 9: Share Your Link
+- Your live demo link will be:
+- https://huggingface.co/spaces/YOUR_USERNAME/YOUR_SPACE_NAME
