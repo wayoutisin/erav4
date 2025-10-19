@@ -1,0 +1,64 @@
+{
+  "aws": {
+    "region": "<<AWS REGION>>",
+    "profile": "default"
+  },
+  "ec2": {
+    "key_name": "aws_ci",
+    "key_path": "<<Path to key from local machine>>",
+    "instance_type": "m7i-flex.large",
+    "security_groups": "<<SECURITY GROUP NAME>>",
+    "instance_id": "<<INSTANCE ID>>",
+    "public_ip": "<<PUBLIC IP ADDRESS>>",
+    "ami_id": "<<AMI ID>>",
+    "storage": {
+      "volume_size": 40,
+      "volume_type": "gp3"
+    },
+    "tags": {
+      "Name": "ResNet Server",
+      "Project": "ImageClassification",
+      "Environment": "Development"
+    },
+    "security_group_rules": [
+      {
+        "protocol": "tcp",
+        "port": 22,
+        "cidr": "0.0.0.0/0",
+        "description": "SSH access"
+      },
+      {
+        "protocol": "tcp", 
+        "port": 8888,
+        "cidr": "0.0.0.0/0",
+        "description": "Jupyter notebook"
+      }
+    ]
+  },
+  "deployment": {
+    "remote_workspace": "/home/ubuntu/resnet-training",
+    "python_environment": "conda",
+    "conda_env_name": "pytorch-env",
+    "requirements_file": "requirements.txt",
+    "setup_script": "scripts/setup_environment.sh",
+    "sync_exclude": [
+      "*.pyc",
+      "__pycache__/",
+      "*.git/",
+      "data/",
+      "outputs/",
+      "models/",
+      ".DS_Store"
+    ]
+  },
+  "s3": {
+    "data_prefix": "datasets/",
+    "model_prefix": "models/",
+    "results_prefix": "results/"
+  },
+  "monitoring": {
+    "enable_cloudwatch": true,
+    "log_group": "/aws/ec2/ml-training",
+    "metrics_namespace": "ML/Training"
+  }
+}

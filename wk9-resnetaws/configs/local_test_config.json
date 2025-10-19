@@ -1,0 +1,60 @@
+{
+  "data": {
+    "dataset_path": "data/sample_dataset",
+    "batch_size": 16,
+    "num_workers": 2,
+    "image_size": 224,
+    "train_split": 0.8,
+    "augmentation": {
+      "random_resized_crop": true,
+      "random_horizontal_flip": true,
+      "color_jitter": {
+        "brightness": 0.1,
+        "contrast": 0.1,
+        "saturation": 0.1,
+        "hue": 0.05
+      },
+      "random_rotation": 5
+    }
+  },
+  "model": {
+    "name": "resnet18",
+    "num_classes": 10,
+    "pretrained": false,
+    "custom_head": false,
+    "dropout": 0.0,
+    "auxiliary_classifier": false,
+    "print_architecture": true
+  },
+  "training": {
+    "epochs": 5,
+    "pretrained": false,
+    "custom_head": false,
+    "dropout": 0.0,
+    "print_architecture": true,
+    "optimizer": {
+      "name": "adam",
+      "lr": 0.01,
+      "weight_decay": 0.0001
+    },
+    "scheduler": {
+      "name": "step",
+      "step_size": 3,
+      "gamma": 0.5
+    },
+    "early_stopping": {
+      "patience": 10,
+      "min_delta": 0.001
+    }
+  },
+  "output": {
+    "output_dir": "outputs/local_test",
+    "save_frequency": 2,
+    "log_frequency": 10
+  },
+  "hardware": {
+    "device": "auto",
+    "mixed_precision": false,
+    "compile_model": false
+  }
+}
